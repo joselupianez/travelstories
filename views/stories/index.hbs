@@ -1,0 +1,21 @@
+<main class="h-full py-10 overflow-y-auto">
+    <div class="container px-6 mx-auto grid">
+        <h1 class="mb-4 text-lg font-semibold">Public Stories</h1>
+        <div class="grid gap-6 mb-8 md:grid-cols-3">
+            {{#each stories}}
+                <div class="min-w-0 p-4 bg-white rounded-lg shadow">
+                    <h4 class="mb-3 font-semibold"><a href="/stories/{{_id}}">{{title}}</a><small class="px-4 text-blue-500">{{{editIcon user ../user _id}}}</small></h4>
+                    <p>{{stripTags (truncate body 250)}}</p>
+                    <a href="/stories/{{_id}}" class="text-sm font-semibold">Read More...</a>
+                    <div class="flex items-center py-5">
+                        <div class="text-sm">
+                            <p class="leading-none">Posted by <a class="font-semibold" href="/stories/user/{{user._id}}">{{user.username}}</a> on <span class="card-title">{{formatDate createdAt 'MMM Do YYYY'}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <p>No stories to display</p>
+            {{/each}}
+        </div>
+    </div>
+</main>

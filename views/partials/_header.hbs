@@ -1,0 +1,27 @@
+<header class="z-10 py-4 bg-white shadow-md">
+    <nav class="relative container h-full px-6 mx-auto">
+        <div class="flex items-center justify-between">
+            <div class="pt-2">
+                <a href="/"><img src="/img/logo.png" alt="TravelStories"></a>
+            </div>
+            <div class="hidden space-x-6 items-center md:flex">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/stories">Public Stories</a>
+                <a href="/users/logout" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-500 border border-transparent rounded active:bg-blue-500 hover:bg-blue-700">Log Out</a>
+            </div>
+            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        <div class="md:hidden">
+            <div id="menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href="#">Dashboard</a>
+                <a href="#">Public Stories</a>
+                <a href="/users/logout" class="inline-block align-baseline bg-blue-400 hover:bg-blue-700 text-sm text-white py-2 px-3 rounded focus:outline-none focus:shadow-outline">Log Out</a>
+            </div>
+        </div>
+    </div>
+    </nav>
+</header>
