@@ -4,7 +4,7 @@
     A full stack application where users can share their recent travel stories and view other users' stories.
     <br />
     <br />
-    <a href="">View</a>
+    <a href="https://travel-stories-demo.herokuapp.com/">View</a>
     ·
     <a href="https://github.com/joselupianez/travelstories/issues">Report Bug</a>
     ·
