@@ -1,34 +1,36 @@
-<div class="bg-white max-w-4xl mx-auto p-8 md:px-10 py-5 my-5 rounded-lg shadow-2xl">
-    <h1 class="my-6 text-2xl font-semibold">Add Story</h1>
-    <div class="row">
+<div class="bg-white max-w-4xl mx-auto card my-5 lg:card-side bg-base-100 shadow-xl">
+    <div class="card-body">
+        <h1 class="card-title">Add Story</h1>
         <form action="/stories" method="POST" class="col s12">
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
-                    Story Title
+            <div class="form-control">
+                <label class="label" for="title">
+                    <span class="label-text">Story Title</span>
                 </label>
-                <input name="title" id="title" type="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <input name="title" id="title" type="title" class="input input-bordered">
             </div>
-            <div class="mt-4 text-sm">
-                <span class="block text-gray-700 text-sm font-bold mb-2">Status</span>
-                <div class="mt-2">
-                    <label class="inline-flex items-center text-gray-600">
-                        <input type="radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" name="status" value="public" checked>
-                        <span class="ml-2">Public</span>
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Status</span>
+                </label>
+                <div class="form-control flex-row">
+                    <label class="label cursor-pointer inline-flex">
+                        <input type="radio" class="radio" name="status" value="public" checked>
+                        <span class="label-text pl-2">Public</span>
                     </label>
-                    <label class="inline-flex items-center ml-6 text-gray-600">
-                        <input type="radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" name="status" value="private">
-                        <span class="ml-2">Private</span>
+                    <label class="label cursor-pointer inline-flex ml-5">
+                        <input type="radio" class="radio" name="status" value="private">
+                        <span class="label-text pl-2">Private</span>
                     </label>
                 </div>
             </div>
-            <div class="mt-4 text-sm">
+            <div class="form-control">
                 <h5 class="block text-gray-700 text-sm font-bold my-2">Tell Us Your Story</h5>
-                <textarea id="body" name="body"></textarea>
+                <textarea id="body" name="body" placeholder="Tell us your story" class="textarea textarea-bordered"></textarea>
             </div>
 
             <div class="flex items-center gap-3 py-5">
-                <input type="submit" value="Submit" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-500 border border-transparent rounded active:bg-blue-500 hover:bg-blue-700">
-                <a href="/dashboard" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-500 border border-transparent rounded active:bg-red-500 hover:bg-red-700">Cancel</a>
+                <input type="submit" value="Submit" class="btn btn-primary">
+                <a href="/dashboard" class="btn btn-accent">Cancel</a>
             </div>
         </form>
     </div>

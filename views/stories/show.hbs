@@ -1,7 +1,9 @@
-<div class="bg-white max-w-4xl mx-auto p-8 md:px-10 py-5 my-5 rounded-lg shadow-2xl">
-    <h1 class="py-3 text-2xl font-semibold">{{story.title}} <small class="text-blue-500">{{{editIcon story.user user story._id false}}}</small></h1>
-    {{{story.body}}}
-    <div class="py-6">
-        <p class="leading-none">Posted by <a class="font-semibold" href="/stories/user/{{story.user._id}}">{{story.user.username}}</a> on <span class="card-title">{{formatDate story.createdAt 'MMM Do YYYY'}}</span></p>
+<div class="bg-white max-w-4xl mx-auto card my-5 lg:card-side bg-base-100 shadow-xl">
+    <div class="card-body">
+        <h1 class="py-3 text-2xl font-semibold">{{story.title}} <small class="text-blue-500">{{{editIcon story.user user story._id false}}}</small></h1>
+        {{{story.body}}}
+        <div class="py-6">
+            <p class="leading-none">Posted by <a class="font-semibold" href="/stories/user/{{story.user._id}}">{{story.user.username}}</a> on <span>{{formatDate story.createdAt 'MMM Do YYYY'}}</span></p>
+        </div>
     </div>
 </div>
